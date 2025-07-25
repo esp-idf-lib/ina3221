@@ -23,5 +23,5 @@ menu "Example configuration"
                 Measuring mode to use. See 8.3.1 Basic ADC Functions in the datasheet.
     endchoice
 
-    rsource "../../../../devtools/Kconfig.i2c"
+    rsource "../../../Kconfig.i2c"
 endmenu
