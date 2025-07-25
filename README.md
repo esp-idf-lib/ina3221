@@ -11,7 +11,7 @@ Driver for INA3221 shunt and bus voltage monitor.
 ## Installation
 
 ```sh
-idf.py add-dependency "esp-idf-lib/ina3221^1.1.0
+idf.py add-dependency esp-idf-lib/ina3221^1.1.0
 ```
 
 ## Support
