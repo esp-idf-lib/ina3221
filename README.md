@@ -1,5 +1,9 @@
 # esp-idf-lib/ina3221
 
+[![Build examples](https://github.com/esp-idf-lib/ina3221/actions/workflows//build.yml/badge.svg)](https://github.com/esp-idf-lib/ina3221/actions/workflows//build.yml)
+[![Build docs](https://github.com/esp-idf-lib/ina3221/actions/workflows//build-docs.yml/badge.svg)](https://github.com/esp-idf-lib/ina3221/actions/workflows//build-docs.yml)
+[![Validation](https://github.com/esp-idf-lib/ina3221/actions/workflows//validate-component.yml/badge.svg)](https://github.com/esp-idf-lib/ina3221/actions/workflows//validate-component.yml)
+
 Driver for INA3221 shunt and bus voltage monitor.
 
 * [Documentation](https://esp-idf-lib.github.io/ina3221/)
@@ -11,7 +15,7 @@ Driver for INA3221 shunt and bus voltage monitor.
 ## Installation
 
 ```sh
-idf.py add-dependency esp-idf-lib/ina3221^1.1.0
+idf.py add-dependency esp-idf-lib/ina3221
 ```
 
 ## Support
