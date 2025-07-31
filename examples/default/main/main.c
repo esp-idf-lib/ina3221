@@ -18,15 +18,16 @@
 
 void task(void *pvParameters)
 {
-    ina3221_t dev = {
-            /* shunt values are 100 mOhm for each channel */
-            .shunt = {
-                CONFIG_EXAMPLE_SHUNT_RESISTOR_MILLI_OHM,
-                CONFIG_EXAMPLE_SHUNT_RESISTOR_MILLI_OHM,
-                CONFIG_EXAMPLE_SHUNT_RESISTOR_MILLI_OHM
-            },
-            .config.config_register = INA3221_DEFAULT_CONFIG,
-            .mask.mask_register = INA3221_DEFAULT_MASK
+    ina3221_t dev =
+    {
+        /* shunt values are 100 mOhm for each channel */
+        .shunt = {
+            CONFIG_EXAMPLE_SHUNT_RESISTOR_MILLI_OHM,
+            CONFIG_EXAMPLE_SHUNT_RESISTOR_MILLI_OHM,
+            CONFIG_EXAMPLE_SHUNT_RESISTOR_MILLI_OHM
+        },
+        .config.config_register = INA3221_DEFAULT_CONFIG,
+        .mask.mask_register = INA3221_DEFAULT_MASK
     };
     memset(&dev.i2c_dev, 0, sizeof(i2c_dev_t));
 
@@ -78,7 +79,8 @@ void task(void *pvParameters)
 
             vTaskDelay(pdMS_TO_TICKS(20));
 
-        } while (!(dev.mask.cvrf)); // check if measure done
+        }
+        while (!(dev.mask.cvrf));   // check if measure done
 #else
         ESP_ERROR_CHECK(ina3221_get_status(&dev)); // get mask
 
