@@ -344,7 +344,7 @@ esp_err_t ina3221_set_critical_alert(ina3221_t *dev, ina3221_channel_t channel, 
 esp_err_t ina3221_set_warning_alert(ina3221_t *dev, ina3221_channel_t channel, float current);
 
 /**
- * @brief Set Sum Warning alert
+ * @brief Set Sum Critical alert
  *
  * Compared to each completed cycle of all selected channels : Sum register
  *
@@ -352,7 +352,7 @@ esp_err_t ina3221_set_warning_alert(ina3221_t *dev, ina3221_channel_t channel, f
  * @param voltage voltage to set (mV) //  max : 655.32
  * @return ESP_OK to indicate success
  */
-esp_err_t ina3221_set_sum_warning_alert(ina3221_t *dev, float voltage);
+esp_err_t ina3221_set_sum_critical_alert(ina3221_t *dev, float voltage);
 
 /**
  * @brief Set Power-valid upper-limit

@@ -286,7 +286,7 @@ esp_err_t ina3221_set_warning_alert(ina3221_t *dev, ina3221_channel_t channel, f
     return write_reg_16(dev, INA3221_REG_WARNING_ALERT_1 + channel * 2, *(uint16_t *)&raw);
 }
 
-esp_err_t ina3221_set_sum_warning_alert(ina3221_t *dev, float voltage)
+esp_err_t ina3221_set_sum_critical_alert(ina3221_t *dev, float voltage)
 {
     CHECK_ARG(dev);
 
